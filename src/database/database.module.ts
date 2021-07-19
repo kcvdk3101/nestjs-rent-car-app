@@ -3,18 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 
 @Module({
-  imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'Kh@ivuong3101',
-      database: 'rentalcar',
-      autoLoadEntities: true,
-      synchronize: true,
-    }),
-  ],
+  imports: [TypeOrmModule.forRoot()],
   exports: [TypeOrmModule],
 })
 export class DatabaseModule {
