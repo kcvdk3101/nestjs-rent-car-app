@@ -1,4 +1,4 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { ObjectType, Field } from '@nestjs/graphql';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'cars' })
@@ -22,11 +22,11 @@ export class Car {
 
   @Column()
   @Field()
-  thumbnailUrl: string;
+  mileage: string;
 
   @Column()
   @Field()
-  mileage: string;
+  gas: string;
 
   @Column()
   @Field()
@@ -34,5 +34,5 @@ export class Car {
 
   @Column()
   @Field()
-  gas: string;
+  thumbnailUrl: string;
 }

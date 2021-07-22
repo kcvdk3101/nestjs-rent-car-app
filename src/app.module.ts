@@ -11,7 +11,6 @@ import { DatabaseModule } from './database/database.module';
     ConfigModule.forRoot(),
     DatabaseModule,
     GraphQLModule.forRoot({
-      // playground: process.env.NODE_ENV === 'development' ? true : false,
       debug: process.env.NODE_ENV === 'development' ? true : false,
       autoSchemaFile: true,
     }),
